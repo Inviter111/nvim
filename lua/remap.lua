@@ -55,3 +55,12 @@ vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
 vim.g.copilot_no_tab_map = true
 vim.keymap.set('i', '<C-K>', '<Plug>(copilot-accept-word)')
 
+vim.keymap.set('n', '<leader>=', ':so ~/.config/nvim/init.lua<CR>', { desc = 'Reload configuration' })
+
+-- Quickfix navigation
+vim.keymap.set('n', '<leader>qj', ':cnext<CR>', { desc = 'Go to next quickfix item' })
+vim.keymap.set('n', '<leader>qk', ':cprev<CR>', { desc = 'Go to previous quickfix item' })
+vim.keymap.set('n', '<leader>qo', ':copen<CR>', { desc = 'Open quickfix list' })
+vim.keymap.set('n', '<leader>qc', ':cclose<CR>', { desc = 'Close quickfix list' })
+
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>', { desc = 'Open tmux sessionizer' })

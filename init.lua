@@ -26,6 +26,8 @@ require('set')
 -- Keymappings
 require('remap')
 
+require('health')
+
 -- Setup neovim lua configuration
 require('neodev').setup()
 

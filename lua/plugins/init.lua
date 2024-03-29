@@ -118,6 +118,10 @@ return {
     build = ':TSUpdate',
   },
 
+  {
+    'nvim-telescope/telescope-ui-select.nvim',
+  },
+
   -- Debug plugin, enable if needed
   --
   -- require 'kickstart.plugins.debug',
