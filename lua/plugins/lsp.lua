@@ -16,7 +16,8 @@ return {
   -- [[ Configure LSP ]]
   --  This function gets run when an LSP connects to a particular buffer.
   config = function()
-    local on_attach = function(_, bufnr)
+    local on_attach = function(client, bufnr)
+      print('LSP started: ' .. client.name)
       -- NOTE: Remember that lua is a real programming language, and as such it is possible
       -- to define small helper and utility functions so you don't have to repeat yourself
       -- many times.
@@ -76,10 +77,10 @@ return {
     }, { mode = 'v' })
     require('mason').setup()
     require('mason-lspconfig').setup()
-    require('typescript-tools').setup({
-      expose_as_code_action = { 'add_missing_imports' },
-      on_attach = on_attach,
-    })
+    -- require('typescript-tools').setup({
+    --   expose_as_code_action = { 'add_missing_imports' },
+    --   on_attach = on_attach,
+    -- })
 
     local servers = {
       -- clangd = {},
@@ -87,6 +88,7 @@ return {
       -- pyright = {},
       rust_analyzer = {},
       html = { filetypes = { 'html', 'twig', 'hbs' } },
+      tsserver = {},
 
       lua_ls = {
         Lua = {

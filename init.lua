@@ -20,15 +20,10 @@ require('lazy').setup({
   { import = 'plugins' },
 }, {})
 
--- Sets options
 require('set')
-
--- Keymappings
 require('remap')
-
+require('functions')
 require('health')
-
--- Setup neovim lua configuration
 require('neodev').setup()
 
 -- [[ Highlight on yank ]]
