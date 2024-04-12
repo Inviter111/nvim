@@ -35,9 +35,6 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { silent = true, desc = "Dele
 
 vim.keymap.set("n", "Q", "<nop>")
 
--- Format the current buffer
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format current buffer" })
-
 -- Close current buffer
 vim.keymap.set("n", "<leader>x", ":bd<CR>", { desc = "Close current buffer" })
 
