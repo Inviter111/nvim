@@ -25,6 +25,7 @@ require('remap')
 require('functions')
 require('health')
 require('neodev').setup()
+require('snippets')
 
 -- [[ Highlight on yank ]]
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
